@@ -31,12 +31,12 @@
             android:label="@string/title_activity_user_login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".user_main"
-            android:label="@string/title_activity_user_main"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".librarian_main"
             android:label="@string/title_activity_librarian_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".user_mainpage"
+            android:label="@string/title_activity_user_mainpage"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
