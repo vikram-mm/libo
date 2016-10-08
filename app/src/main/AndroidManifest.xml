@@ -33,6 +33,10 @@
         <activity
             android:name=".user_main"
             android:label="@string/title_activity_user_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".librarian_main"
+            android:label="@string/title_activity_librarian_main"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
