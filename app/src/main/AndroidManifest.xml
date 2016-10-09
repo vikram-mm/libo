@@ -31,8 +31,8 @@
             android:label="@string/title_activity_user_login"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".librarian_main"
-            android:label="@string/title_activity_librarian_main"
+            android:name="librarian_main"
+            android:label="libo"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".user_mainpage"
