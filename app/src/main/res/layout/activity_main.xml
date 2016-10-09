@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="197dp"
-        android:id="@+id/button_librarian"
+        android:id="@+id/button_user"
         android:text="USER"
         android:onClick="goToLibLogin"
         android:background="@color/button_color"

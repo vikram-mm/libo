@@ -1,24 +1,20 @@
 package com.example.arvind.libo;
 
-import android.app.Fragment;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-/**
- * Created by user on 12/31/15.
- */
-public class find_a_book extends Fragment{
+public class find_a_book extends AppCompatActivity {
 
-    View myView;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.find_a_book, container, false);
-        return myView;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_find_a_book);
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent (find_a_book.this,librarian_main.class);
+        find_a_book.this.startActivity(intent);
     }
 }
-

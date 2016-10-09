@@ -24,13 +24,22 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+
 public class librarian_main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_librarian_main);
+
+//        librarian_fragment_main fragment = new librarian_fragment_main();
+//        android.support.v4.app.FragmentTransaction fragmentTransaction =
+//                getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.replace(R.id.fragment_container, fragment);
+//        fragmentTransaction.commit();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -91,17 +100,20 @@ public class librarian_main extends AppCompatActivity
 
 
         if (id == R.id.nav_find_book) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_librarian_main
-                            , new find_a_book())
-                    .commit();
+            Intent intent = new Intent(this, find_a_book.class);
+            startActivity(intent);
+            finish();
+
 
         } else if (id == R.id.nav_generate_bill) {
-            Intent intent = new Intent (librarian_main.this,generate_bill.class);
-            librarian_main.this.startActivity(intent);
+            Intent intent = new Intent(this, generate_bill.class);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_view_member){
-            Intent intent = new Intent (librarian_main.this,view_member.class);
-            librarian_main.this.startActivity(intent);
+            Intent intent = new Intent(this, view_member.class);
+            startActivity(intent);
+            finish();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -109,6 +121,19 @@ public class librarian_main extends AppCompatActivity
         return true;
     }
 
+    public void goToIssue(View view){
+        Intent intent = new Intent (this,issue_main.class);
+        startActivity(intent);
+    }
 
+    public void goToManage_membership(View view){
+        Intent intent = new Intent (this,manage_membership_main.class);
+        startActivity(intent);
+    }
+
+    public void goToManage_books(View view){
+        Intent intent = new Intent (this,manage_books.class);
+        startActivity(intent);
+    }
 }
 
