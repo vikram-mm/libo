@@ -3,6 +3,7 @@ package com.example.arvind.libo;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -318,13 +319,13 @@ public class user_login extends AppCompatActivity implements LoaderCallbacks<Cur
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
                 if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
+                    // Account exists, return_1 true if the password matches.
                     return pieces[1].equals(mPassword);
                 }
             }
 
             // TODO: register the new account here.
-            return true;
+            return false;
         }
 
         @Override
@@ -334,6 +335,8 @@ public class user_login extends AppCompatActivity implements LoaderCallbacks<Cur
 
             if (success) {
                 finish();
+                Intent intent = new Intent (user_login.this,user_main.class);
+                user_login.this.startActivity(intent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

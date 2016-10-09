@@ -319,7 +319,7 @@ public class librarian_login extends AppCompatActivity implements LoaderCallback
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
                 if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
+                    // Account exists, return_1 true if the password matches.
                     return pieces[1].equals(mPassword);
                 }
             }

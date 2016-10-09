@@ -80,9 +80,6 @@ public class librarian_main extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -122,7 +119,7 @@ public class librarian_main extends AppCompatActivity
     }
 
     public void goToIssue(View view){
-        Intent intent = new Intent (this,issue_main.class);
+        Intent intent = new Intent (this,issue.class);
         startActivity(intent);
     }
 

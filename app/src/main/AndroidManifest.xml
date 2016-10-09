@@ -34,16 +34,18 @@
             android:name=".librarian_main"
             android:label="libo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".user_mainpage"
-            android:label="@string/title_activity_user_mainpage"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".issue_main" />
         <activity android:name=".manage_membership_main" />
         <activity android:name=".manage_books" />
         <activity android:name=".find_a_book" />
         <activity android:name=".view_member" />
-        <activity android:name=".generate_bill"></activity>
+        <activity android:name=".generate_bill" />
+        <activity
+            android:name=".user_main"
+            android:label="libo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".issue" />
+        <activity android:name=".add_book_main"></activity>
     </application>
 
 </manifest>
