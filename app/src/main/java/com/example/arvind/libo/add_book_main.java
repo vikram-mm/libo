@@ -15,7 +15,7 @@ public class add_book_main extends AppCompatActivity {
 
     }
     public void goTo_ocr(View view){
-        Intent intent = new Intent (this,ocr.class);
+        Intent intent = new Intent (this,ocr_ms.class);
         startActivity(intent);
     }
 }
