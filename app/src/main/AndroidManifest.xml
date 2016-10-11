@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -45,7 +46,8 @@
             android:label="libo"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".issue" />
-        <activity android:name=".add_book_main"></activity>
+        <activity android:name=".add_book_main" />
+        <activity android:name=".add_member"></activity>
     </application>
 
 </manifest>
