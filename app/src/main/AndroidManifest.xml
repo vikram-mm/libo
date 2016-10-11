@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -35,7 +34,7 @@
             android:name=".librarian_main"
             android:label="libo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".issue_main" />
+        <activity android:name=".issue" />
         <activity android:name=".manage_membership_main" />
         <activity android:name=".manage_books" />
         <activity android:name=".find_a_book" />
@@ -45,9 +44,14 @@
             android:name=".user_main"
             android:label="libo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".issue" />
         <activity android:name=".add_book_main" />
-        <activity android:name=".add_member"></activity>
+        <activity android:name=".ocr">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
